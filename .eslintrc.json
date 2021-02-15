@@ -8,6 +8,7 @@
         "airbnb",
         "plugin:@typescript-eslint/recommended",
         "prettier/@typescript-eslint",
+        "plugin:jsx-a11y/recommended",
         "plugin:prettier/recommended"
     ],
     "globals": {
@@ -26,7 +27,8 @@
         "react",
         "@typescript-eslint",
         "react-hooks",
-        "prettier"
+        "prettier",
+        "simple-import-sort"
     ],
     "rules": {
       "react-hooks/rules-of-hooks": "error",
@@ -42,6 +44,7 @@
       "react/prop-types": "off",
       "no-unused-expressions": "off",
       "@typescript-eslint/ban-types": "off",
+      "react/react-in-jsx-scope": "off",
       "@typescript-eslint/explicit-function-return-type": [
         "error",
         {
@@ -54,6 +57,14 @@
         {
           "ts": "never",
           "tsx": "never"
+        }
+      ],
+      "jsx-a11y/anchor-is-valid": [
+        "error",
+        {
+          "components": ["Link"],
+          "specialLink": ["hrefLeft", "hrefRight"],
+          "aspects": ["invalidHref", "preferButton"]
         }
       ],
       "prettier/prettier": "error"

@@ -1,10 +1,17 @@
-import GlobalStyle from "../styles/GlobalStyle";
+import { NextComponentType } from 'next';
+import type { AppContext, AppInitialProps, AppProps } from 'next/app';
+import GlobalStyle from '../styles/GlobalStyle';
 
-export default function MyApp({ Component, pageProps }) {
+const MyApp: NextComponentType<AppContext, AppInitialProps, AppProps> = ({
+  Component,
+  pageProps,
+}: AppProps) => {
   return (
     <>
       <GlobalStyle />
       <Component {...pageProps} />
     </>
-  )
-}
+  );
+};
+
+export default MyApp;
