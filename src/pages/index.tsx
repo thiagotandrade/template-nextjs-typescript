@@ -1,8 +1,11 @@
 import { Title } from '../styles/pages/Home';
 
-export default function Home() {
-  return (<div>
-    <Title>Hello, world!</Title>
-  </div>
-  )
-}
+const Home: React.FC = () => {
+  return (
+    <div>
+      <Title>Hello, world!</Title>
+    </div>
+  );
+};
+
+export default Home;
